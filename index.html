@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cardápio Digital</title>
+</head>
+<body>
+    <header>
+        <h1>Cardápio Digital de Frutas e Verduras</h1>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="frutas-legumes-e-verduras-das-estacoes.jpg" alt="Batata">
+            <h2>Batata</h2>
+            <p>R$ 3,00/kg</p>
+            <input type="number" class="quantity" placeholder="Quantidade (kg)" min="0" step="0.1">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="frutas-legumes-e-verduras-das-estacoes.jpg" alt="Couve">
+            <h2>Couve</h2>
+            <p>R$ 2,50/kg</p>
+            <input type="number" class="quantity" placeholder="Quantidade (kg)" min="0" step="0.1">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="frutas-legumes-e-verduras-das-estacoes.jpg" alt="Banana">
+            <h2>Banana</h2>
+            <p>R$ 1,80/kg</p>
+            <input type="number" class="quantity" placeholder="Quantidade (kg)" min="0" step="0.1">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="frutas-legumes-e-verduras-das-estacoes.jpg" alt="Laranja">
+            <h2>Laranja</h2>
+            <p>R$ 2,00/kg</p>
+            <input type="number" class="quantity" placeholder="Quantidade (kg)" min="0" step="0.1">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+    
+    <div class="cart">
+        <h3>Carrinho de Compras</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="total-price">0.00</span></p>
+        <form action="https://api.whatsapp.com/send" method="get" target="_blank">
+            <h3>Fazer Pedido</h3>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
